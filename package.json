@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
+    "pinia": "^3.0.4",
     "pinia-plugin-persistedstate": "^4.7.1",
     "sweetalert2": "^11.26.25",
     "vue": "^3.3.4",
