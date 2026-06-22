@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative bg-gradient-to-r from-blue-950 via-black to-slate-950 text-white"
+    class="relative  mx-auto  py-10 md:py-10 bg-gradient-to-r from-blue-950 via-black to-slate-950 text-white"
   >
     <div
       class="absolute top-0 right-0 h-96 w-96 rounded-full bg-orange-500/10 blur-3xl"
@@ -35,12 +35,14 @@
 
           <div class="mt-10 flex gap-4">
             <button
+            @click="$router.push('/katalog')"
               class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold"
             >
               Belanja Sekarang
             </button>
 
             <button
+            @click="$router.push('/tentang')"
               class="border border-slate-700 px-8 py-4 rounded-xl"
             >
               Tentang SRGALA
@@ -48,12 +50,27 @@
           </div>
         </div>
 
-        <div>
-          <div
-            class="h-[550px] rounded-3xl bg-gradient-to-br from-slate-800 to-black border border-white/10"
-          />
-        </div>
+      <div class="relative w-full h-[550px]">
 
+  <!-- decorative scratches -->
+  <div class="absolute -top-6 -left-6 w-32 h-32 bg-orange-500/20 blur-2xl rotate-12"></div>
+  <div class="absolute bottom-0 right-0 w-40 h-40 bg-white/10 blur-3xl"></div>
+
+  <!-- FRAME -->
+  <div class="relative h-full overflow-hidden border border-white/10 clip-slashed">
+
+    <!-- IMAGE -->
+    <div
+      class="absolute inset-0 bg-cover bg-center scale-110 animate-zoomSlow"
+      style="background-image: url('/image/hero.png')"
+    ></div>
+
+    <!-- overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/70"></div>
+
+  </div>
+
+</div>
       </div>
     </div>
   </section>

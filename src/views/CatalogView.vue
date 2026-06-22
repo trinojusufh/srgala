@@ -76,16 +76,16 @@
             class="border rounded-xl px-4 py-3 w-full dark:bg-gray-700"
           />
 
-          <select
-            v-model="category"
-            class="border rounded-xl px-4 py-3 dark:bg-gray-700"
-          >
-            <option value="">Semua Kategori</option>
-            <option>Elektronik</option>
-            <option>Fashion</option>
-            <option>Makanan</option>
-            <option>Aksesoris</option>
-          </select>
+         <select
+  v-model="category"
+  class="border rounded-xl px-4 py-3 dark:bg-gray-700"
+>
+  <option value="">Semua Kategori</option>
+  <option>Jaket</option>
+  <option>Jersey Pendek</option>
+  <option>Jersey Panjang</option>
+  <option>Singlet</option>
+</select>
 
           <select
             v-model="sort"
@@ -113,10 +113,11 @@
           class="bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden"
         >
 
-          <img
-            :src="item.image"
-            class="w-full h-60 object-cover"
-          />
+        <img
+  :src="item.image"
+  :alt="item.name"
+  class="w-full h-60 object-contain bg-slate-100"
+/>
 
           <div class="p-5">
 
@@ -167,39 +168,147 @@ export default {
      products: [
   {
     id: 1,
-    name: 'Alpha Jersey',
-    category: 'Jersey',
-    description: 'Quick Dry Performance Jersey',
-    price: 179000,
+    name: 'Wolf Jacket',
+    category: 'Jaket',
+    description: 'Jaket Wolf Series',
+    price: 329000,
     rating: 4.9,
-    image: '/images/jersey-1.jpg'
+    image: '/baju/jaketwolf.png'
   },
   {
     id: 2,
-    name: 'Velocity Jersey',
-    category: 'Running',
-    description: 'Breathable Running Series',
-    price: 199000,
+    name: 'Wolf Singlet',
+    category: 'Singlet',
+    description: 'Singlet Wolf Series',
+    price: 159000,
     rating: 4.8,
-    image: '/images/jersey-2.jpg'
+    image: '/baju/singletwolf.png'
   },
   {
     id: 3,
-    name: 'Storm Jacket',
-    category: 'Jaket',
-    description: 'Outdoor Protection Jacket',
-    price: 329000,
-    rating: 4.9,
-    image: '/images/jacket-1.jpg'
+    name: 'Samba Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Samba Lengan Pendek',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/pendeksamba.png'
   },
   {
     id: 4,
-    name: 'Trail Jacket',
-    category: 'Outdoor',
-    description: 'Lightweight Outdoor Jacket',
-    price: 349000,
+    name: 'Samba Jacket',
+    category: 'Jaket',
+    description: 'Jaket Samba Series',
+    price: 329000,
     rating: 4.9,
-    image: '/images/jacket-2.jpg'
+    image: '/baju/jaketsamba.png'
+  },
+  {
+    id: 5,
+    name: 'Wolf Panjang',
+    category: 'Jersey Panjang',
+    description: 'Jersey Wolf Lengan Panjang',
+    price: 199000,
+    rating: 4.8,
+    image: '/baju/panjangwolf.png'
+  },
+  {
+    id: 6,
+    name: 'Sunset Jacket',
+    category: 'Jaket',
+    description: 'Jaket Sunset Series',
+    price: 329000,
+    rating: 4.9,
+    image: '/baju/jaketsunset.png'
+  },
+  {
+    id: 7,
+    name: 'Wolf Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Wolf Lengan Pendek',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/pendekwolf.png'
+  },
+  {
+    id: 8,
+    name: 'Sunset Singlet',
+    category: 'Singlet',
+    description: 'Singlet Sunset Series',
+    price: 159000,
+    rating: 4.8,
+    image: '/baju/singletsunset.png'
+  },
+  {
+    id: 9,
+    name: 'Sunset Panjang',
+    category: 'Jersey Panjang',
+    description: 'Jersey Sunset Lengan Panjang',
+    price: 199000,
+    rating: 4.8,
+    image: '/baju/panjangsunset.png'
+  },
+  {
+    id: 10,
+    name: 'Sunset Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Sunset Lengan Pendek',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/pendeksunset.png'
+  },
+  {
+    id: 11,
+    name: 'Green Jacket',
+    category: 'Jaket',
+    description: 'Jaket Green Series',
+    price: 329000,
+    rating: 4.9,
+    image: '/baju/jaketgreen.png'
+  },
+  {
+    id: 12,
+    name: 'Black Jersey',
+    category: 'Jersey Pendek',
+    description: 'Black Performance Jersey',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/blackpendek.png'
+  },
+  {
+    id: 13,
+    name: 'Green Jersey',
+    category: 'Jersey Pendek',
+    description: 'Green Performance Jersey',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/greenpendek.png'
+  },
+  {
+    id: 14,
+    name: 'Storm Singlet',
+    category: 'Singlet',
+    description: 'Storm Series Singlet',
+    price: 159000,
+    rating: 4.8,
+    image: '/baju/singletstrom.png'
+  },
+  {
+    id: 15,
+    name: 'Storm Pendek',
+    category: 'Jersey Pendek',
+    description: 'Storm Series Jersey Pendek',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/pendekstrom.png'
+  },
+  {
+    id: 16,
+    name: 'Storm Panjang',
+    category: 'Jersey Panjang',
+    description: 'Storm Series Jersey Panjang',
+    price: 199000,
+    rating: 4.8,
+    image: '/baju/panjangstrom.png'
   }
 ]
     }

@@ -9,10 +9,11 @@
         <div>
 
           <div class="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg">
-            <img
-              :src="selectedImage"
-              class="w-full h-[500px] object-cover"
-            />
+           <img
+  :src="selectedImage"
+  :alt="product.name"
+  class="w-full h-[500px] object-contain bg-slate-100 dark:bg-slate-900 p-4"
+/>
           </div>
 
           <div class="grid grid-cols-4 gap-4 mt-4">
@@ -214,10 +215,11 @@
   class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl transition"
 >
 
-            <img
-              :src="item.image"
-              class="w-full h-52 object-cover"
-            />
+         <img
+  :src="item.images[0]"
+  :alt="item.name"
+  class="w-full h-52 object-contain bg-slate-100 p-2"
+/>
 
             <div class="p-4">
 
@@ -283,45 +285,215 @@ export default {
       const productId = this.$route.params.id
 
       const products = [
-        {
-          id: 1,
-          name: 'Alpha Jersey',
-          category: 'Running',
-          price: 18999000,
-          rating: 4.9,
-          review: 1200,
-          sold: 5400,
-          brand: 'Srgala',
-          stock: 25,
-          description:
-            'Jersey running berkualitas tinggi untuk aktivitas olahraga.',
-          images: [
-            'https://picsum.photos/800/800?1',
-            'https://picsum.photos/800/800?2',
-            'https://picsum.photos/800/800?3',
-            'https://picsum.photos/800/800?4'
-          ]
-        },
-        {
-          id: 2,
-          name: 'Sepatu Running',
-          category: 'Fashion',
-          price: 750000,
-          rating: 4.8,
-          review: 500,
-          sold: 2100,
-          brand: 'Nike',
-          stock: 50,
-          description:
-            'Sepatu running nyaman untuk olahraga harian.',
-          images: [
-            'https://picsum.photos/800/800?5',
-            'https://picsum.photos/800/800?6',
-            'https://picsum.photos/800/800?7',
-            'https://picsum.photos/800/800?8'
-          ]
-        }
-      ]
+  {
+    id: 1,
+    name: 'Wolf Jacket',
+    category: 'Jaket',
+    description: 'Jaket Wolf Series dengan bahan premium, nyaman digunakan untuk aktivitas outdoor maupun olahraga.',
+    price: 329000,
+    rating: 4.9,
+    review: 128,
+    sold: 340,
+    stock: 50,
+    brand: 'SRGALA',
+    images: ['/baju/jaketwolf.png']
+  },
+  {
+    id: 2,
+    name: 'Wolf Singlet',
+    category: 'Singlet',
+    description: 'Singlet Wolf Series dengan teknologi quick dry.',
+    price: 159000,
+    rating: 4.8,
+    review: 95,
+    sold: 210,
+    stock: 40,
+    brand: 'SRGALA',
+    images: ['/baju/singletwolf.png']
+  },
+  {
+    id: 3,
+    name: 'Samba Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Samba lengan pendek dengan bahan breathable.',
+    price: 179000,
+    rating: 4.8,
+    review: 80,
+    sold: 190,
+    stock: 45,
+    brand: 'SRGALA',
+    images: ['/baju/pendeksamba.png']
+  },
+  {
+    id: 4,
+    name: 'Samba Jacket',
+    category: 'Jaket',
+    description: 'Jaket Samba untuk olahraga dan aktivitas harian.',
+    price: 329000,
+    rating: 4.9,
+    review: 70,
+    sold: 170,
+    stock: 30,
+    brand: 'SRGALA',
+    images: ['/baju/jaketsamba.png']
+  },
+  {
+    id: 5,
+    name: 'Wolf Panjang',
+    category: 'Jersey Panjang',
+    description: 'Jersey Wolf lengan panjang dengan perlindungan ekstra.',
+    price: 199000,
+    rating: 4.8,
+    review: 75,
+    sold: 160,
+    stock: 40,
+    brand: 'SRGALA',
+    images: ['/baju/panjangwolf.png']
+  },
+  {
+    id: 6,
+    name: 'Sunset Jacket',
+    category: 'Jaket',
+    description: 'Jaket Sunset Series dengan desain modern.',
+    price: 329000,
+    rating: 4.9,
+    review: 90,
+    sold: 250,
+    stock: 35,
+    brand: 'SRGALA',
+    images: ['/baju/jaketsunset.png']
+  },
+  {
+    id: 7,
+    name: 'Wolf Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Wolf lengan pendek untuk aktivitas olahraga.',
+    price: 179000,
+    rating: 4.8,
+    review: 85,
+    sold: 220,
+    stock: 60,
+    brand: 'SRGALA',
+    images: ['/baju/pendekwolf.png']
+  },
+  {
+    id: 8,
+    name: 'Sunset Singlet',
+    category: 'Singlet',
+    description: 'Singlet Sunset dengan bahan ringan dan adem.',
+    price: 159000,
+    rating: 4.7,
+    review: 50,
+    sold: 130,
+    stock: 30,
+    brand: 'SRGALA',
+    images: ['/baju/singletsunset.png']
+  },
+  {
+    id: 9,
+    name: 'Sunset Panjang',
+    category: 'Jersey Panjang',
+    description: 'Jersey Sunset lengan panjang untuk outdoor.',
+    price: 199000,
+    rating: 4.8,
+    review: 55,
+    sold: 145,
+    stock: 40,
+    brand: 'SRGALA',
+    images: ['/baju/panjangsunset.png']
+  },
+  {
+    id: 10,
+    name: 'Sunset Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Sunset lengan pendek dengan warna gradasi.',
+    price: 179000,
+    rating: 4.8,
+    review: 62,
+    sold: 180,
+    stock: 50,
+    brand: 'SRGALA',
+    images: ['/baju/pendeksunset.png']
+  },
+  {
+    id: 11,
+    name: 'Green Jacket',
+    category: 'Jaket',
+    description: 'Jaket Green Series dengan desain eksklusif.',
+    price: 329000,
+    rating: 4.9,
+    review: 65,
+    sold: 150,
+    stock: 25,
+    brand: 'SRGALA',
+    images: ['/baju/jaketgreen.png']
+  },
+  {
+    id: 12,
+    name: 'Black Jersey',
+    category: 'Jersey Pendek',
+    description: 'Jersey hitam premium dengan bahan quick dry.',
+    price: 179000,
+    rating: 4.8,
+    review: 73,
+    sold: 170,
+    stock: 50,
+    brand: 'SRGALA',
+    images: ['/baju/blackpendek.png']
+  },
+  {
+    id: 13,
+    name: 'Green Jersey',
+    category: 'Jersey Pendek',
+    description: 'Jersey hijau dengan bahan breathable.',
+    price: 179000,
+    rating: 4.8,
+    review: 68,
+    sold: 160,
+    stock: 40,
+    brand: 'SRGALA',
+    images: ['/baju/greenpendek.png']
+  },
+  {
+    id: 14,
+    name: 'Storm Singlet',
+    category: 'Singlet',
+    description: 'Singlet Storm Series dengan teknologi quick dry.',
+    price: 159000,
+    rating: 4.7,
+    review: 48,
+    sold: 120,
+    stock: 35,
+    brand: 'SRGALA',
+    images: ['/baju/singletstrom.png']
+  },
+  {
+    id: 15,
+    name: 'Storm Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Storm lengan pendek untuk olahraga.',
+    price: 179000,
+    rating: 4.8,
+    review: 60,
+    sold: 150,
+    stock: 45,
+    brand: 'SRGALA',
+    images: ['/baju/pendekstrom.png']
+  },
+  {
+    id: 16,
+    name: 'Storm Panjang',
+    category: 'Jersey Panjang',
+    description: 'Jersey Storm lengan panjang dengan perlindungan UV.',
+    price: 199000,
+    rating: 4.8,
+    review: 55,
+    sold: 140,
+    stock: 40,
+    brand: 'SRGALA',
+    images: ['/baju/panjangstrom.png']
+  }
+]
 
       const foundProduct = products.find(
         item => item.id === Number(productId)

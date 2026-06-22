@@ -1,26 +1,20 @@
 <template>
   <main class="overflow-hidden">
-    <HeroSection />
+    <HeroSection  />
     <AboutSection />
     <FeaturedProducts />
-    <WhyChooseSection />
-    <TechnologySection />
     <LifestyleBanner />
+    <TechnologySection />
+   
     <BestSellerSection />
     <ValuesSection />
     <CTASection />
     <CommunitySection />
     <TestimonialSection />
+   
     
-    <BestSellerSection />
-    <!-- <section class="bg-orange-500 py-10 overflow-hidden">
-  <div
-    class="whitespace-nowrap text-5xl md:text-7xl font-black text-white"
-  >
-    SRGALA • MOVE BEYOND LIMITS • SRGALA • MOVE BEYOND LIMITS •
-    SRGALA • MOVE BEYOND LIMITS •
-  </div>
-</section> -->
+      <WhyChooseSection />
+
   </main>
 </template>
 

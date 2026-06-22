@@ -68,7 +68,8 @@
             />
 
             <div
-              class="absolute top-10 right-10 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl"
+              class="absolute top-10  bg-cover bg-center scale-410  right-20 h-80 w-80 "
+              style="background-image: url('/image/logo.png')"
             />
 
             <div

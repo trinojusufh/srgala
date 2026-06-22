@@ -20,8 +20,14 @@
           class="product-card"
         >
           <div
-            class="h-80 bg-gradient-to-br from-slate-900 to-black"
-          />
+  class="h-80 bg-slate-100 dark:bg-slate-900 flex items-center justify-center overflow-hidden"
+>
+ <img
+  :src="item.image"
+  :alt="item.name"
+  class="w-full h-full object-contain p-4 transition duration-300 hover:scale-105"
+/>
+</div>
 
           <div class="p-6">
             <h3 class="text-2xl font-bold">
@@ -33,6 +39,7 @@
             </p>
 
             <button
+            @click="$router.push(`/produk/${item.id}`)"
               class="mt-6 text-orange-500 font-semibold"
             >
               Lihat Detail →
@@ -52,19 +59,60 @@ export default {
 
   data() {
     return {
-      products: [
-        {
-          name: 'Alpha Jersey',
-          description: 'Ringan dan breathable untuk performa maksimal.'
-        },
-        {
-          name: 'Velocity Jersey',
-          description: 'Dirancang untuk aktivitas intensitas tinggi.'
-        },
-        {
-          name: 'Storm Jacket',
-          description: 'Perlindungan ekstra untuk aktivitas outdoor.'
-        }
+      products:  [
+  {
+    id: 1,
+    name: 'Wolf Jacket',
+    category: 'Jaket',
+    description: 'Jaket Wolf Series',
+    price: 329000,
+    rating: 4.9,
+    image: '/baju/jaketwolf.png'
+  },
+  {
+    id: 2,
+    name: 'Wolf Singlet',
+    category: 'Singlet',
+    description: 'Singlet Wolf Series',
+    price: 159000,
+    rating: 4.8,
+    image: '/baju/singletwolf.png'
+  },
+  {
+    id: 3,
+    name: 'Samba Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Samba Lengan Pendek',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/pendeksamba.png'
+  },
+  {
+    id: 4,
+    name: 'Samba Jacket',
+    category: 'Jaket',
+    description: 'Jaket Samba Series',
+    price: 329000,
+    rating: 4.9,
+    image: '/baju/jaketsamba.png'
+  },
+  {
+    id: 5,
+    name: 'Wolf Panjang',
+    category: 'Jersey Panjang',
+    description: 'Jersey Wolf Lengan Panjang',
+    price: 199000,
+    rating: 4.8,
+    image: '/baju/panjangwolf.png'
+  }, {
+    id: 10,
+    name: 'Sunset Pendek',
+    category: 'Jersey Pendek',
+    description: 'Jersey Sunset Lengan Pendek',
+    price: 179000,
+    rating: 4.8,
+    image: '/baju/pendeksunset.png'
+  }
       ]
     }
   }

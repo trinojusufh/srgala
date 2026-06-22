@@ -36,12 +36,14 @@
         class="mt-10 flex flex-wrap justify-center gap-4"
       >
         <button
+        @click="$router.push('/katalog')"
           class="btn-primary"
         >
           Belanja Sekarang
         </button>
 
         <button
+        @click="$router.push('/katalog')"
           class="btn-secondary"
         >
           Lihat Koleksi

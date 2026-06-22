@@ -37,6 +37,42 @@
 ::-webkit-scrollbar-track {
   background: #020617;
 }
+.before-enter {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+@keyframes zoomSlow {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.clip-slashed {
+  clip-path: polygon(
+    0 5%,
+    8% 0,
+    95% 0,
+    100% 10%,
+    100% 95%,
+    92% 100%,
+    5% 100%,
+    0 90%
+  );
+}
+
+.animate-zoomSlow {
+  animation: zoomSlow 12s ease-in-out infinite;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 ::-webkit-scrollbar-thumb {
   background: #f97316;

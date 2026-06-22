@@ -12,11 +12,15 @@
           <div class="speed-line"></div>
         </div>
 
-        <div
-          class="logo-pulse w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg"
-        >
-          <span class="text-white font-black text-xl"> SG </span>
-        </div>
+       <div
+  class="logo-pulse w-14 h-14 bg-gradient-to-br from-white to-orange-500 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
+>
+  <img
+    src="/image/logo.png"
+    alt="SG Logo"
+    class="w-full h-full object-cover"
+  />
+</div>
 
         <div class="relative z-10">
           <h1  class="font-black text-2xl tracking-wider
